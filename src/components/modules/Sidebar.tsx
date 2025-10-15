@@ -15,8 +15,8 @@ export default function Sidebar() {
         alt="Profile"
         className="w-28 h-28 rounded-full border-4 mb-4 border-amber-300"
         
-        height={200}
-        width={200}
+        height={500}
+        width={500}
         
       />
       <h2 className="text-xl font-semibold mb-6">Rubel Rana</h2>
@@ -25,7 +25,7 @@ export default function Sidebar() {
         {["Home", "About", "Portfolio","Blogs", "Contact"].map((item) => (
           <Button
             key={item}
-            variant="ghost"
+            variant="link"
             className="hover:text-primary"
             asChild
           >
@@ -37,10 +37,10 @@ export default function Sidebar() {
       {/* <Separator className="my-4 w-3/4" /> */}
 
       <div className="flex gap-4 text-xl mt-auto text-amber-300">
-        <Facebook className= "rounded bg-[#f3f3f6]" />
-        <Instagram className= "rounded bg-[#f3f3f6]" />
-        <Youtube className= "rounded bg-[#f3f3f6]" />
-        <Linkedin className= "rounded bg-[#f3f3f6]" />
+        <Facebook className= "rounded "/>
+        <Instagram className= "rounded "/>
+        <Youtube className= "rounded "/>
+        <Linkedin className= "rounded "/>
       </div>
 
       <p className="mt-4 text-xs text-muted-foreground">© 2025 Rubel R.</p>
