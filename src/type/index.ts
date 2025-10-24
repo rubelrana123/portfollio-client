@@ -19,3 +19,22 @@ export interface Post {
   updatedAt: string; // or Date if you parse it
   author: Author;
 }
+
+ 
+export interface Project {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+  thumbnail: string | null;
+  liveUrl: string | null;
+  clientRepoUrl: string | null;
+  serverRepoUrl: string | null;
+  technologies: string[];
+  features: string[];
+  isFeatured: boolean;
+  ownerId: number;
+  createdAt: string;
+  updatedAt: string;
+  owner: Author;
+}
