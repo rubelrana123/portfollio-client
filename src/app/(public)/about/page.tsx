@@ -20,15 +20,14 @@ export default function AboutPage() {
             <Image
               src="https://i.ibb.co.com/4RKnqpsf/profile.jpg"
               alt="Rubel Rana"
-              width={500}
-              height={500}
-              className=""
+              width={300}
+              height={300} 
             />
           </div>
         </div>
 
         {/* === Right: Content === */}
-        <div className="space-y-6">
+        <div className="space-y-5">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">I&apos;m Rubel Rana</h2>
             <h3 className="text-xl font-semibold text-[#54595F] mb-4">
@@ -47,7 +46,7 @@ export default function AboutPage() {
             <div>
               <p className="text-gray-500">Phone</p>
               <p className="font-medium flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#FFC034]" /> +8801791094486
+                <Phone className="w-4 h-4 text-[#FFC034]" /> +8801705918931
               </p>
             </div>
 
@@ -71,13 +70,13 @@ export default function AboutPage() {
             <div>
               <p className="text-gray-500">Email</p>
               <p className="font-medium flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#FFC034]" /> info@rubel.com
+                <Mail className="w-4 h-4 text-[#FFC034]" /> rubelrana.dev@gmail.com
               </p>
             </div>
 
             <div>
               <p className="text-gray-500">Hobby</p>
-              <p className="font-medium">Coding & Projects</p>
+              <p className="font-medium">Human Being</p>
             </div>
           </div>
 

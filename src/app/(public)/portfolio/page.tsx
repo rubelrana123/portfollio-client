@@ -28,7 +28,7 @@ const PortfolioPage = async () => {
     const projects = await res.json();
     console.log("Fetched projects:", projects);
     return (
-        <main className="max-w-6xl mx-auto py-10 px-4">
+        <main className="max-w-6xl mx-auto py-10 px-4 bg-[#fff4db]">
             <h1 className="text-3xl font-bold mb-6">My Portfolio</h1>
             <div className="grid grid-cols-3 gap-6">
                 {projects?.data?.map((project : Project) => (

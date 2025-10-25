@@ -1,6 +1,7 @@
 import Sidebar from "@/components/modules/Sidebar";
 import "../../app/globals.css";
 import MobileNavbar from "@/components/modules/MobileNavbar";
+import { Toaster } from "sonner";
  
 
 export default function RootLayout({ children } : { children: React.ReactNode }) {
@@ -16,7 +17,12 @@ export default function RootLayout({ children } : { children: React.ReactNode })
   {/* Mobile Layout */}
   <div className="flex flex-col md:hidden min-h-screen">
     <MobileNavbar />
-    <main className="flex-1 overflow-y-auto p-4">{children}</main>
+    <main className="flex-1 overflow-y-auto p-4">
+      <div>
+      <Toaster richColors position="top-center"/>
+      {children}
+      </div>
+      </main>
   </div>
 </div>
 

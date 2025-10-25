@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { navigationItems } from "@/constant";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,7 +12,7 @@ export default function Sidebar() {
   return (
     <aside className="w-64 h-screen sticky top-0 bg-card shadow-sm flex flex-col items-center py-6 border-r">
       <Image
-        src="https://rubelrana.netlify.app/static/media/tinywow_profile_photo_9101936.6359affc412b6bf13660.png"
+        src="https://i.ibb.co.com/gMNYc09J/rubelrana-dev.png"
         alt="Profile"
         className="w-28 h-28 rounded-full border-4 mb-4 border-amber-300"
         
@@ -22,14 +23,14 @@ export default function Sidebar() {
       <h2 className="text-xl font-semibold mb-6">Rubel Rana</h2>
 
       <nav className="flex flex-col space-y-2 mb-8 text-center">
-        {["Home", "About", "Portfolio","Blogs", "Contact"].map((item) => (
+        {navigationItems?.map((item) => (
           <Button
-            key={item}
+            key={item?.label}
             variant="link"
             className="hover:text-primary"
             asChild
           >
-            < Link href={`/${item.toLowerCase()}`}>{item}</Link>
+            < Link href={`${item.href}`}>{item?.label}</Link>
           </Button>
         ))}
       </nav>

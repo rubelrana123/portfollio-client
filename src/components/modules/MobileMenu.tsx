@@ -1,20 +1,22 @@
+import { navigationItems } from "@/constant";
 import { Facebook, Instagram,  Linkedin, Youtube } from "lucide-react";
 import Link from "next/link";
 
  
 
+
 export default function MobileMenu({ onClose }: { onClose: () => void }) {
   return (
     <div className="absolute top-16 left-0 right-0 bg-white shadow-md border-b z-50">
       <nav className="flex flex-col items-center py-4 space-y-3">
-        {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
+        {navigationItems.map((item) => (
           <Link
-            key={item}
-            href={`/${item.toLowerCase()}`}
+            key={item?.label}
+            href={`/${item.href}`}
             onClick={onClose}
             className="hover:text-yellow-600"
           >
-            {item}
+            {item?.label}
           </Link>
         ))}
       </nav>
