@@ -21,20 +21,21 @@ export interface Post {
 }
 
  
+ 
 export interface Project {
-  id: number;
-  title: string;
-  slug: string;
-  description: string;
-  thumbnail: string | null;
-  liveUrl: string | null;
-  clientRepoUrl: string | null;
-  serverRepoUrl: string | null;
-  technologies: string[];
-  features: string[];
-  isFeatured: boolean;
-  ownerId: number;
-  createdAt: string;
-  updatedAt: string;
-  owner: Author;
+  id: number
+  title: string
+  slug: string
+  description: string
+  thumbnail?: string
+  liveUrl?: string
+  clientRepoUrl?: string
+  serverRepoUrl?: string
+  features: string[]
+  isFeatured: boolean
+  owner: Author
+  technologies: string[]
+  ownerId: number
+  createdAt: string
+  updatedAt: string
 }

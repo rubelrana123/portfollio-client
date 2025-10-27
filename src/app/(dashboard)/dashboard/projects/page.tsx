@@ -7,57 +7,8 @@ import { Plus, Pencil, Trash2, ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import { ProjectDialog } from "@/components/Dashboard/Dialog/ProjectDialog"
 import { DeleteDialog } from "@/components/Dashboard/Dialog/DeleteDialog"
-
-// ✅ Match Prisma Model
-export interface Project {
-  id: number
-  title: string
-  slug: string
-  description: string
-  thumbnail?: string
-  liveUrl?: string
-  clientRepoUrl?: string
-  serverRepoUrl?: string
-  features: string[]
-  isFeatured: boolean
-  ownerId: number
-  createdAt: string
-  updatedAt: string
-}
-
-// const initialProjects: Project[] = [
-//   {
-//     id: 1,
-//     title: "E-commerce Platform",
-//     slug: "ecommerce-platform",
-//     description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
-//     thumbnail: "https://i.ibb.co/9njWyRY/screencapture-kajolcreative-web-app-2022-12-04-20-28-11.png",
-//     liveUrl: "https://example.com/ecommerce",
-//     clientRepoUrl: "https://github.com/rubelrana/ecommerce-client",
-//     serverRepoUrl: "https://github.com/rubelrana/ecommerce-server",
-//     features: ["Next.js", "Prisma", "Stripe", "Tailwind"],
-//     isFeatured: true,
-//     ownerId: 1,
-//     createdAt: "2025-01-10T12:00:00Z",
-//     updatedAt: "2025-01-15T12:00:00Z",
-//   },
-//   {
-//     id: 2,
-//     title: "Portfolio Website",
-//     slug: "portfolio-website",
-//     description: "Modern portfolio website showcasing my skills and blog posts.",
-//     thumbnail: "https://i.ibb.co/C2vd68H/screencapture-recycle-clothh-web-app-2022-12-04-15-40.png",
-//     liveUrl: "https://example.com/portfolio",
-//     clientRepoUrl: "https://github.com/rubelrana/portfolio",
-//     serverRepoUrl: "",
-//     features: ["Next.js", "Framer Motion", "MDX"],
-//     isFeatured: false,
-//     ownerId: 1,
-//     createdAt: "2025-02-05T10:00:00Z",
-//     updatedAt: "2025-02-10T10:00:00Z",
-//   },
-// ]
-
+import { Project } from "@/type"
+ 
  const ProjectsPage =  () => {
   const [projects, setProjects] = useState<Project[]>([])
   const [isDialogOpen, setIsDialogOpen] = useState(false)

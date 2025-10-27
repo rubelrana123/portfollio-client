@@ -27,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="disable-grammarly-extension" content="true" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
